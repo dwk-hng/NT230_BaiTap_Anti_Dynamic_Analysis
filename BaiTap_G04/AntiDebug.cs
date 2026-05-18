@@ -82,8 +82,17 @@ namespace BaiTap_G04
             bool isDetectedByAPI = IsDebuggerPresent();
             bool isDetectedByPEB = ManualPEBCheck();
 
-            // Nếu 1 trong 2 phương pháp phát hiện ra Debugger thì kết luận là môi trường debugger 
-            return isDetectedByAPI || isDetectedByPEB;
+            // Do đây là phần test 2 phương pháp có hoạt động đúng hay không,
+            // nên cần đảm bảo cả 2 phương pháp đều có thể phát hiện được Debugger.
+            // Nên phần này được chỉnh lại là
+            // nếu cả 2 phương pháp đều phát hiện ra Debugger thì mới kết luận là môi trường debugger, 
+            // nếu chỉ 1 trong 2 phương pháp phát hiện ra Debugger thì sẽ không hoàn thành bài test.
+            // Do đó chỉnh lại như sau:
+            return isDetectedByAPI && isDetectedByPEB;
+
+            // Ở môi trường bình thường, chỉ cần 1 trong 2 phương pháp phát hiện ra Debugger là đủ,
+            // lúc đó chỉnh lại là:
+            // return isDetectedByAPI || isDetectedByPEB;
         }
     }
 }
