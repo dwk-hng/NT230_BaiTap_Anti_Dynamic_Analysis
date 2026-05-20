@@ -1,5 +1,7 @@
 # NT230_BaiTap_Anti_Dynamic_Analysis
 
+**Lớp:** NT230.Q21.ANTT
+
 **Nhóm:** G04
 
 **Danh sách thành viên:**
@@ -23,7 +25,10 @@ Tiếp theo, build project này và đi tới thư mục `\NT230_BaiTap_Anti_Dyn
 Chạy file `.exe` trên máy tính bình thường (không phải môi trường phân tích) sẽ hiện một MessageBox với thông báo "NT230.Q21.ANTT | G04 Group | Payload Executed".
 
 ### Chạy trên môi trường debug
-Sử dụng x32dbg để kiểm tra, chọn lần lượt File -> Open rồi load file `.exe` này vào môi trường debug, sau đó chọn Run liên tiếp. Khi đó sẽ không hiện MessageBox mà chỉ thấy thông báo debugging stopped. Ở tab Log sẽ thấy các dòng như sau:
+- Sử dụng x32dbg để kiểm tra. 
+- Chọn lần lượt File -> Open rồi load file `.exe` này vào môi trường debug.
+- Sau đó chọn Run liên tiếp. Khi đó sẽ không hiện MessageBox mà chỉ thấy thông báo debugging stopped. 
+- Ở tab Log sẽ thấy các dòng như sau:
 ```
 Thread 12904 exit
 Thread 24556 exit
