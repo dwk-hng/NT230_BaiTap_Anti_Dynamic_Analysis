@@ -58,8 +58,6 @@ Sau khi build mã nguồn thành file `.exe`, thực hiện 2 kịch bản sau t
 Chương trình sẽ kết thúc trong im lặng để che giấu hành vi.  
 (Nếu dùng Procmon để xem, sẽ thấy sự kiện `Thread Exit` với trạng thái `SUCCESS`).
 
----
-
 ### Kịch bản 2: Có tương tác
 
 1. Chạy file `.exe` và liên tục rê chuột trên màn hình.
