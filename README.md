@@ -52,7 +52,7 @@ Sau khi build mã nguồn thành file `.exe`, thực hiện 2 kịch bản sau t
 ### Kịch bản 1: Không có tương tác
 
 1. Chạy file `.exe` và buông tay khỏi chuột.
-2. Đợi khoảng 2 đến 3 giây (hàm sleep em đặt là 2 giây).
+2. Đợi khoảng 2 đến 3 giây (hàm sleep được đặt là 2 giây).
 
 **Kết quả:**  
 Chương trình sẽ kết thúc trong im lặng để che giấu hành vi.  
