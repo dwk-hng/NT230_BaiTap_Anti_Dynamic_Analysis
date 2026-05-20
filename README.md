@@ -46,4 +46,24 @@ Từ đó có thể thấy trên môi trường debug, chương trình sẽ khô
 _Chưa cập nhật mô tả._
 
 ### Chạy trên môi trường sandbox
-_Chưa cập nhật mô tả._
+
+Sau khi build mã nguồn thành file `.exe`, thực hiện 2 kịch bản sau trên VMWare:
+
+### Kịch bản 1: Không có tương tác
+
+1. Chạy file `.exe` và buông tay khỏi chuột.
+2. Đợi khoảng 2 đến 3 giây (hàm sleep em đặt là 2 giây).
+
+**Kết quả:**  
+Chương trình sẽ kết thúc trong im lặng để che giấu hành vi.  
+(Nếu dùng Procmon để xem, sẽ thấy sự kiện `Thread Exit` với trạng thái `SUCCESS`).
+
+---
+
+### Kịch bản 2: Có tương tác
+
+1. Chạy file `.exe` và liên tục rê chuột trên màn hình.
+
+**Kết quả:**  
+Sau 2 giây, mã độc nhận diện có thao tác người dùng và tiến hành bung payload  
+(hiển thị hộp thoại `MessageBox` với nội dung `"Payload Executed"`).
