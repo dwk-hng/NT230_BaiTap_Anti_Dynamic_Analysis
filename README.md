@@ -43,7 +43,10 @@ Debugging stopped!
 Từ đó có thể thấy trên môi trường debug, chương trình sẽ không hiện MessageBox mà sẽ âm thầm thoát để tránh bị phát hiện.
 
 ### Chạy trên môi trường VM
-_Chưa cập nhật mô tả._
+
+1. Chạy file `.exe` vừa build.
+2. Check log trong Procmon.
+3. Chương trình kết thúc trong im lặng (do phát hiện qua kĩ thuật Artifact-based hoặc WMI Hardware).
 
 ### Chạy trên môi trường sandbox
 
