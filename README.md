@@ -19,7 +19,7 @@ Clone code của nhóm về bằng câu lệnh:
 git clone https://github.com/dwk-hng/NT230_BaiTap_Anti_Dynamic_Analysis.git
 ```
 
-Tiếp theo, build project này và đi tới thư mục `\NT230_BaiTap_Anti_Dynamic_Analysis\BaiTap_G04\bin\Debug` để lấy file `.exe`.
+Tiếp theo, build project này và đi tới thư mục `\NT230_BaiTap_Anti_Dynamic_Analysis\BaiTap_G04\bin\Debug` hoặc `\NT230_BaiTap_Anti_Dynamic_Analysis\BaiTap_G04\bin\Release` để lấy file `.exe`.
 
 ### Chạy trên môi trường sạch (không phải môi trường phân tích)
 Chạy file `.exe` trên máy tính bình thường (không phải môi trường phân tích) sẽ hiện một MessageBox với thông báo "NT230.Q21.ANTT | G04 Group | Payload Executed".
