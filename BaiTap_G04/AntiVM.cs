@@ -11,9 +11,7 @@ namespace BaiTap_G04
 {
     public static class AntiVM
     {
-        // ==========================================
         // PHƯƠNG THỨC 1: Artifact-based (Kiểm tra file đặc trưng của VMWare, VBox, Hyper-V)
-        // ==========================================
         private static bool CheckVMFiles()
         {
             string[] vmFiles = {
@@ -33,9 +31,7 @@ namespace BaiTap_G04
             return false;
         }
 
-        // ==========================================
         // PHƯƠNG THỨC 1: Artifact-based (Kiểm tra tiến trình đặc trưng)
-        // ==========================================
         private static bool CheckVMProcesses()
         {
             string[] vmProcesses = {
@@ -52,9 +48,7 @@ namespace BaiTap_G04
             return false;
         }
 
-        // ==========================================
         // PHƯƠNG THỨC 1: Artifact-based (Kiểm tra MAC Address)
-        // ==========================================
         private static bool CheckMACAddress()
         {
             // Các địa chỉ MAC đặc trưng của các VM
@@ -78,9 +72,7 @@ namespace BaiTap_G04
             return false;
         }
 
-        // ==========================================
         // PHƯƠNG THỨC 1: Artifact-based (Kiểm tra Registry Keys)
-        // ==========================================
         private static bool CheckVMRegistry()
         {
             // Các key registry đặc trưng của các VM
@@ -108,9 +100,7 @@ namespace BaiTap_G04
             return false;
         }
 
-        // ==========================================
         // PHƯƠNG THỨC 2: Behavior-based (Kiểm tra thông tin phần cứng bằng WMI)
-        // ==========================================
         private static bool CheckHardwareManufacturer()
         {
             try
@@ -144,12 +134,12 @@ namespace BaiTap_G04
             return false;
         }
 
-        // ==========================================
         // HÀM TỔNG HỢP KIỂM TRA
-        // ==========================================
         public static bool CheckAll()
         {
-            return CheckVMFiles() || CheckVMProcesses() || CheckMACAddress() || CheckVMRegistry() || CheckHardwareManufacturer();
+            // Tạm thời tắt CheckMACAddress để có thể test được 2 trường hợp antiDebug và antiVM tránh false positive 
+            //return CheckVMFiles() || CheckVMProcesses() || CheckMACAddress() || CheckVMRegistry() || CheckHardwareManufacturer();
+            return CheckVMFiles() || CheckVMProcesses() || CheckVMRegistry() || CheckHardwareManufacturer();
         }
     }
 }
