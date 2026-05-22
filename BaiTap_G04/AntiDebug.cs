@@ -5,16 +5,12 @@ namespace BaiTap_G04
 {
     public static class AntiDebug
     {
-        // =====================================================================
         // PHƯƠNG THỨC 1: SỬ DỤNG WINDOWS API 
-        // =====================================================================
         [DllImport("kernel32.dll", ExactSpelling = true, SetLastError = true)]
         private static extern bool IsDebuggerPresent();
 
 
-        // =====================================================================
         // PHƯƠNG THỨC 2: MANUAL PEB CHECK (LOW-LEVEL)
-        // =====================================================================
         // Import các API cấp thấp để can thiệp bộ nhớ
         [DllImport("ntdll.dll", SetLastError = true)]
         private static extern int NtQueryInformationProcess(IntPtr processHandle, int processInformationClass, ref PROCESS_BASIC_INFORMATION processInformation, int processInformationLength, out int returnLength);
@@ -70,9 +66,7 @@ namespace BaiTap_G04
             return false;
         }
 
-        // =====================================================================
         // HÀM TỔNG HỢP KIỂM TRA
-        // =====================================================================
         /// <summary>
         /// Gọi hàm này để chạy toàn bộ các phương thức kiểm tra Debugger.
         /// Trả về true nếu phát hiện bất kỳ dấu hiệu nào.
